@@ -1,0 +1,97 @@
+﻿@model CIS526_FinalAssignment.Models.Task
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Task</legend>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pathName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pathName)
+            @Html.ValidationMessageFor(model => model.pathName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.startDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.startDate)
+            @Html.ValidationMessageFor(model => model.startDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.endDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.endDate)
+            @Html.ValidationMessageFor(model => model.endDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.taskName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.taskName)
+            @Html.ValidationMessageFor(model => model.taskName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.pointTotal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pointTotal)
+            @Html.ValidationMessageFor(model => model.pointTotal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.isMilestone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.isMilestone)
+            @Html.ValidationMessageFor(model => model.isMilestone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.milestoneBonus)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.milestoneBonus)
+            @Html.ValidationMessageFor(model => model.milestoneBonus)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.solution)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.solution)
+            @Html.ValidationMessageFor(model => model.solution)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

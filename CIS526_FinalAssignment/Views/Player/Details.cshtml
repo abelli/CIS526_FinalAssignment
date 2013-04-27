@@ -1,0 +1,43 @@
+﻿@model CIS526_FinalAssignment.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Player</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.totalScore)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.totalScore)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.isFrozen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isFrozen)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

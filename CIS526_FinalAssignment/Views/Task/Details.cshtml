@@ -1,0 +1,78 @@
+﻿@model CIS526_FinalAssignment.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Task</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pathName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pathName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.startDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.startDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.endDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.taskName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.taskName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.pointTotal)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pointTotal)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.isMilestone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isMilestone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.milestoneBonus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.milestoneBonus)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.solution)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.solution)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,46 @@
+﻿@model CIS526_FinalAssignment.Models.Player
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Player</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.totalScore)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.totalScore)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.isFrozen)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.isFrozen)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
