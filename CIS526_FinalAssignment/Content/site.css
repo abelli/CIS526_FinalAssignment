@@ -1,0 +1,65 @@
+body
+{
+	background-color: #807D7E;
+	font-family: arial;
+    color: white;
+}
+
+#wrapper
+{
+	margin-right: auto;
+	margin-left: auto;
+	width:80%;
+	min-width: 900px;
+	box-shadow: 5px 5px;
+    background-color: black;
+    padding: 20px;
+}
+
+#footer
+{
+	padding: 10px 10px;
+	font-size: .70em;
+	font-style: italic;
+	text-align: center;
+}
+
+a
+{
+	color: #D1D1D1;
+}
+
+table
+{
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #C0C0C0;
+	width: 900px;
+	border-spacing: 0;
+}
+
+td, th 
+{
+	padding: 5px;
+	border: 1px solid #C0C0C0;
+}
+
+td
+{
+	text-align: center;
+}
+
+.text
+{
+	text-align: left;
+}
+
+tr:nth-of-type(odd)
+{
+    background-color: black;
+}
+
+tr:nth-of-type(even)
+{
+	background-color: #524D4F;
+}

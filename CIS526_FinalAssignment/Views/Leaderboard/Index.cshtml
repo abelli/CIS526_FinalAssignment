@@ -1,10 +1,12 @@
 ﻿@model IEnumerable<CIS526_FinalAssignment.Models.Leaderboard>
 
+@{Layout = "~/Views/Shared/_Layout.cshtml";}
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Leaderboards";
 }
 
-<h2>Index</h2>
+<h2>Leaderboards</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,22 +14,18 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.pathName)
+            Path Name
         </th>
-        <th></th>
+
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.pathName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        <td class="text">
+                @Html.ActionLink(item.pathName, "Details", new { id = item.ID })
         </td>
     </tr>
 }
 
 </table>
+
