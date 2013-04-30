@@ -4,6 +4,7 @@ namespace CIS526_FinalAssignment.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using CIS526_FinalAssignment.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<CIS526_FinalAssignment.Models.PlayerDBContext>
     {
@@ -13,7 +14,7 @@ namespace CIS526_FinalAssignment.Migrations
         }
 
         protected override void Seed(CIS526_FinalAssignment.Models.PlayerDBContext context)
-        {
+        {         
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

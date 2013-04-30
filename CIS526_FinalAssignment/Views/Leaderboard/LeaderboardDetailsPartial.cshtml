@@ -1,0 +1,20 @@
+﻿@model CIS526_FinalAssignment.Models.Leaderboard
+
+<h2>@Html.DisplayFor(model => model.pathName)</h2>
+<hr/>
+
+<table>
+<tr>
+    <th>
+        Rank
+    </th>
+    <th>
+        Player
+    </th>
+    <th>
+        Score
+    </th>
+
+    </tr>
+    @Html.DisplayFor(model => model.scores)
+</table>

@@ -60,3 +60,4 @@ C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\System.Web.Optimization.dll
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebGrease.dll
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.init.resources
+C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.rankfield.resources

@@ -6,17 +6,13 @@
 
 <h2>Details</h2>
 
-<fieldset>
-    <legend>Leaderboard</legend>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.pathName)
+<div class="contentbox">
+    <div class="liquid_100">
+        @Html.Partial("LeaderboardDetailsPartial", Model)
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=Model.ID }) |
+            @Html.ActionLink("Back to Leaderboard List", "Index")
+        </p>
     </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.pathName)
-    </div>
-</fieldset>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+</div>

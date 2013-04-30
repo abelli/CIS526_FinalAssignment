@@ -12,7 +12,7 @@ namespace CIS526_FinalAssignment.Controllers
     public class LeaderboardController : Controller
     {
         private PlayerDBContext db = new PlayerDBContext();
-
+        
         //
         // GET: /Leaderboard/
 
@@ -27,6 +27,7 @@ namespace CIS526_FinalAssignment.Controllers
         public ActionResult Details(int id = 0)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
+            Rank(leaderboard);
             if (leaderboard == null)
             {
                 return HttpNotFound();
@@ -109,6 +110,17 @@ namespace CIS526_FinalAssignment.Controllers
             db.Leaderboards.Remove(leaderboard);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public void Rank(Leaderboard board)
+        {
+            List<PathScore> scores = board.scores.OrderByDescending(p => p.score).ToList();
+            int i = 1;
+            foreach (PathScore score in scores)
+            {
+                score.rank = i;
+                i++;
+            }
         }
 
         protected override void Dispose(bool disposing)

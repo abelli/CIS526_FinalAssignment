@@ -132,6 +132,10 @@
     <Compile Include="Migrations\201304290221143_init.Designer.cs">
       <DependentUpon>201304290221143_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201304300300484_rank field.cs" />
+    <Compile Include="Migrations\201304300300484_rank field.Designer.cs">
+      <DependentUpon>201304300300484_rank field.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Leaderboard.cs" />
     <Compile Include="Models\PathScore.cs" />
@@ -221,6 +225,9 @@
     <EmbeddedResource Include="Migrations\201304290221143_init.resx">
       <DependentUpon>201304290221143_init.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201304300300484_rank field.resx">
+      <DependentUpon>201304300300484_rank field.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -230,6 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\DisplayTemplates\PathScore.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Leaderboard\LeaderboardDetailsPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
