@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
+using CIS526_FinalAssignment.ViewModels;
 
 namespace CIS526_FinalAssignment.Controllers
 {
@@ -110,6 +111,33 @@ namespace CIS526_FinalAssignment.Controllers
             db.Leaderboards.Remove(leaderboard);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpGet, ActionName("GetJson")]
+        public JsonResult GetScores(int id, int rank = 1)
+        {
+            Leaderboard leaderboard = db.Leaderboards.Find(id);
+            Rank(leaderboard);
+            List<PathScore> scores = leaderboard.scores.OrderBy(p => p.rank).ToList();
+            List<LeaderBoardScore> results = new List<LeaderBoardScore>();
+            int max = rank + 50;
+            if (max > scores.Count) max = scores.Count;
+
+            for (int i = rank-1; i < max; i++) 
+            {
+                PathScore cur = scores.ElementAt(i);
+                LeaderBoardScore score = new LeaderBoardScore();
+                score.scoreID = cur.ID;
+                score.playerID = (int)cur.playerID;
+                score.leaderboardID = (int)cur.leaderboardID;
+                score.score = cur.score;
+                score.rank = cur.rank;
+                Player player = db.Players.Find(cur.playerID);
+                score.userName = player.username;
+                score.leaderboard = leaderboard.pathName;
+                results.Add(score);
+            }
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
         public void Rank(Leaderboard board)
