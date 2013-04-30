@@ -16,6 +16,9 @@ namespace CIS526_FinalAssignment.App_Start
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-2.1.0.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/leaderboard").Include(
+                        "~/Scripts/leaderboard.js"));
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
         }

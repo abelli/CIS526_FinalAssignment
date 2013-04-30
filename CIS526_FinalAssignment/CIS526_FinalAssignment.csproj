@@ -159,6 +159,7 @@
     <Content Include="Scripts\jquery-ui-1.10.1.js" />
     <Content Include="Scripts\jquery-ui-1.10.1.min.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\leaderboard.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

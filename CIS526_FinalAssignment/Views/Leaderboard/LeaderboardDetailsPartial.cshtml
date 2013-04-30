@@ -3,7 +3,8 @@
 <h2>@Html.DisplayFor(model => model.pathName)</h2>
 <hr/>
 
-<table>
+<input id="boardId" hidden="true" value="@Model.ID" />
+<table id="topTen">
 <tr>
     <th>
         Rank
@@ -16,5 +17,6 @@
     </th>
 
     </tr>
-    @Html.DisplayFor(model => model.scores)
+</table>
+<table id="scoreboard">
 </table>

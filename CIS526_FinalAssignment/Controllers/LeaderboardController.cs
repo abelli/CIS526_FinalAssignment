@@ -113,14 +113,42 @@ namespace CIS526_FinalAssignment.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet, ActionName("GetJson")]
+        [HttpGet, ActionName("GetTopTen")]
+        public JsonResult GetTopTenScores(int id)
+        {
+            int rank = 1;
+            Leaderboard leaderboard = db.Leaderboards.Find(id);
+            Rank(leaderboard);
+            List<PathScore> scores = leaderboard.scores.OrderBy(p => p.rank).ToList();
+            List<LeaderBoardScore> results = new List<LeaderBoardScore>();
+            int max = rank + 9;
+            if (max > scores.Count) max = scores.Count;
+
+            for (int i = rank - 1; i < max; i++)
+            {
+                PathScore cur = scores.ElementAt(i);
+                LeaderBoardScore score = new LeaderBoardScore();
+                score.scoreID = cur.ID;
+                score.playerID = (int)cur.playerID;
+                score.leaderboardID = (int)cur.leaderboardID;
+                score.score = cur.score;
+                score.rank = cur.rank;
+                Player player = db.Players.Find(cur.playerID);
+                score.userName = player.username;
+                score.leaderboard = leaderboard.pathName;
+                results.Add(score);
+            }
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet, ActionName("GetScores")]
         public JsonResult GetScores(int id, int rank = 1)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
             Rank(leaderboard);
             List<PathScore> scores = leaderboard.scores.OrderBy(p => p.rank).ToList();
             List<LeaderBoardScore> results = new List<LeaderBoardScore>();
-            int max = rank + 50;
+            int max = rank + 39;
             if (max > scores.Count) max = scores.Count;
 
             for (int i = rank-1; i < max; i++) 
