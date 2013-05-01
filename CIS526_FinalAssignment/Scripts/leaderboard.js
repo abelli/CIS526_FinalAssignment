@@ -1,5 +1,5 @@
 var boardId = $('#boardId').val();
-var rank = 1;
+var rank = 11;
 pathArray = window.location.pathname.split( '/' );
 host = pathArray[0];
 
@@ -18,19 +18,24 @@ function LeaderBoardScore(scoreID, playerID, leaderboardID, score, rank, userNam
 }
 
 $.get(host + "/Leaderboard/GetTopTen/" + boardId, function(data) {
+	var count = 1;
+
 	for (i in data) {
-		topTen.push(data[i]);
-		rank++;
+		topTen.push(data[i]);       
+		count++;
 		$('#topTen').append('<tr><td class="topTen">' + 
 			data[i].rank +
-			'</td><td class="topTen">' +
+			'</td><td class="topTen" id="userName">' +
 			data[i].userName +
 			'</td><td class="topTen">' +
 			data[i].score +
 			'</td><td class="topTen"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"></td></tr>');
 	}
 
-	if (rank < 11) $('#moreScores').slideUp();
+	if (count < 11) {
+		$('#moreScores').slideUp();
+		rank = count;
+	}
 });
 
 function getScores() {
@@ -41,11 +46,17 @@ function getScores() {
 				scores.push(data[i]);
 				$('#scoreboard').append('<tr><td class="score">' + 
 					data[i].rank +
-					'</td><td class="score">' +
+					'</td><td class="score" id="userName">' +
 					data[i].userName +
 					'</td><td class="score">' +
 					data[i].score +
-					'</td><td class="topTen"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"></td></tr>');
+					'</td><td class="topTen">'
+					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px">'
+					+ '<img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px">'
+					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px">'
+					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px">'
+					+ '<img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px">'
+					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"></td></tr>');
 				rank++;
 			}
 
@@ -55,6 +66,39 @@ function getScores() {
 }
 
 getScores();
+
+$('#search').click(function() {
+	if ($('#searchTerm').val() != '') {
+		$('#userName.topTen').each(function() {
+			if ($('#searchTerm').val() === $(this).text()) {
+				$(document).scrollTop($(this).position().top-100);
+				$(this).parent().css({ opacity: 1.0 });
+			}
+			else $(this).parent().css({ opacity: 0.3 });
+		});
+
+		$('#userName.score').each(function() {
+			if ($('#searchTerm').val() === $(this).text()) {
+				$(document).scrollTop($(this).position().top-100);
+				$(this).parent().css({ opacity: 1.0 });
+			}
+			else $(this).parent().css({ opacity: 0.3 });
+		});
+	}
+});
+
+$('#clearSearch').click(function() {
+
+	$('#userName.topTen').each(function() {
+			$(this).parent().css({ opacity: 1.0 });
+	});
+
+	$('#userName.score').each(function() {
+		$(this).parent().css({ opacity: 1.0 });
+	});
+
+	$('#searchTerm').val("");
+});
 
 $('#moreScores').click(function() {
 	getScores();
