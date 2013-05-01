@@ -148,7 +148,7 @@ namespace CIS526_FinalAssignment.Controllers
             Rank(leaderboard);
             List<PathScore> scores = leaderboard.scores.OrderBy(p => p.rank).ToList();
             List<LeaderBoardScore> results = new List<LeaderBoardScore>();
-            int max = rank + 39;
+            int max = rank + 24;
             if (max > scores.Count) max = scores.Count;
 
             for (int i = rank-1; i < max; i++) 

@@ -63,3 +63,16 @@ tr:nth-of-type(even)
 {
 	background-color: #524D4F;
 }
+
+.topTen
+{
+	color: #A677B4;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.score
+{
+	font-weight: bold;
+	color: #A677B4;
+}
