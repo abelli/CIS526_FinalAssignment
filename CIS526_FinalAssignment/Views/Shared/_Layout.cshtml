@@ -9,7 +9,13 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
+
     <div id="wrapper">
+        <div id="header">
+            <div id="nav" style="float: right">
+                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Players", "Index", "Player") | @Html.ActionLink("Tasks", "Index", "Task")
+            </div>
+        </div>
         @RenderBody()
     </div>
 
