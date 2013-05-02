@@ -5,6 +5,7 @@ host = pathArray[0];
 
 var topTen = [];
 var scores = [];
+var userNames = [];
 
 function LeaderBoardScore(scoreID, playerID, leaderboardID, score, rank, userName, leaderboard)
 {
@@ -65,6 +66,12 @@ function getScores() {
 	});
 }
 
+$.get(host + "/Leaderboard/GetPlayers/", function(data) {
+	for (i in data) {
+		userNames.push(data[i].username);
+	}
+});
+
 getScores();
 
 $('#search').click(function() {
@@ -102,4 +109,8 @@ $('#clearSearch').click(function() {
 
 $('#moreScores').click(function() {
 	getScores();
+});
+
+$('#searchTerm').autocomplete({
+	source: userNames
 });

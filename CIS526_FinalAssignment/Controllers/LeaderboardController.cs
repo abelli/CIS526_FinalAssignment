@@ -168,6 +168,24 @@ namespace CIS526_FinalAssignment.Controllers
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet, ActionName("GetPlayers")]
+        public JsonResult GetPlayers()
+        {
+            List<Player> players = db.Players.ToList();
+            List<PlayerView> results = new List<PlayerView>();
+
+            foreach (Player player in players)
+            {
+                PlayerView res = new PlayerView();
+                res.ID = player.ID;
+                res.username = player.username;
+                res.totalScore = player.totalScore;
+                res.isFrozen = player.isFrozen;
+                results.Add(res);
+            }
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
         public void Rank(Leaderboard board)
         {
             List<PathScore> scores = board.scores.OrderByDescending(p => p.score).ToList();
