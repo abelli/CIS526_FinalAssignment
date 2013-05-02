@@ -30,7 +30,13 @@ $.get(host + "/Leaderboard/GetTopTen/" + boardId, function(data) {
 			data[i].userName +
 			'</td><td class="topTen">' +
 			data[i].score +
-			'</td><td class="topTen"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px"><img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"></td></tr>');
+			'</td><td class="topTen">'
+			+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
+			+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
+			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px">'
+			+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
+			+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
+			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px"></td></tr>');
 	}
 
 	if (count < 11) {
@@ -52,12 +58,12 @@ function getScores() {
 					'</td><td class="score">' +
 					data[i].score +
 					'</td><td class="topTen">'
-					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px">'
-					+ '<img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px">'
-					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px">'
-					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="25px" height="25px">'
-					+ '<img src="' + host + '/Content/images/icons/key.png" width="25px" height="25px">'
-					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="25px" height="25px"></td></tr>');
+					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
+					+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
+					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px">'
+					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
+					+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
+					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px"></td></tr>');
 				rank++;
 			}
 
@@ -97,7 +103,7 @@ $('#search').click(function() {
 $('#clearSearch').click(function() {
 
 	$('#userName.topTen').each(function() {
-			$(this).parent().css({ opacity: 1.0 });
+		$(this).parent().css({ opacity: 1.0 });
 	});
 
 	$('#userName.score').each(function() {
