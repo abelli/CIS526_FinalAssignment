@@ -31,12 +31,13 @@ $.get(host + "/Leaderboard/GetTopTen/" + boardId, function(data) {
 			'</td><td class="topTen">' +
 			data[i].score +
 			'</td><td class="topTen">'
-			+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
-			+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
-			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px">'
-			+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
-			+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
-			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px"></td></tr>');
+			+ '<img src="' + host + '/Content/images/icons/Gate1.png" width="20px" height="18px" alt="Achievement 1">'
+			+ '<img src="' + host + '/Content/images/icons/key1.png" width="28px" height="12px" alt="Achievement 2">'
+			+ '<img src="' + host + '/Content/images/icons/Gate2.png" width="20px" height="18px" alt="Achievement 3">'
+			+ '<img src="' + host + '/Content/images/icons/key2.png" width="28px" height="12px" alt="Achievement 4">'
+			+ '<img src="' + host + '/Content/images/icons/Gate3.png" width="20px" height="18px" alt="Achievement 5">'
+			+ '<img src="' + host + '/Content/images/icons/key3.png" width="28px" height="12px" alt="Achievement 6">'
+			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="20px" height="20px" alt="Achievement 7"></td></tr>');
 	}
 
 	if (count < 11) {
@@ -58,12 +59,13 @@ function getScores() {
 					'</td><td class="score">' +
 					data[i].score +
 					'</td><td class="topTen">'
-					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
-					+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
-					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px">'
-					+ '<img src="' + host + '/Content/images/icons/Gate.png" width="15px" height="15px">'
-					+ '<img src="' + host + '/Content/images/icons/key.png" width="15px" height="15px">'
-					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="15px" height="15px"></td></tr>');
+					+ '<img src="' + host + '/Content/images/icons/Gate1.png" width="20px" height="18px" alt="Achievement 1">'
+					+ '<img src="' + host + '/Content/images/icons/key1.png" width="28px" height="12px" alt="Achievement 2">'
+					+ '<img src="' + host + '/Content/images/icons/Gate2.png" width="20px" height="18px" alt="Achievement 3">'
+					+ '<img src="' + host + '/Content/images/icons/key2.png" width="28px" height="12px" alt="Achievement 4">'
+					+ '<img src="' + host + '/Content/images/icons/Gate3.png" width="20px" height="18px" alt="Achievement 5">'
+					+ '<img src="' + host + '/Content/images/icons/key3.png" width="28px" height="12px" alt="Achievement 6">'
+					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="20px" height="20px" alt="Achievement 7"></td></tr>');
 				rank++;
 			}
 
