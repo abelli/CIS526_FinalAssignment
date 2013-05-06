@@ -10,63 +10,63 @@
     <legend>Task</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.pathName)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.pathName)
+         @Html.Raw("Task Name")
     </div>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.startDate)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.startDate)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.endDate)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.endDate)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.taskName)
-    </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.taskName)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.description)
+         @Html.Raw("Description")
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.description)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.pointTotal)
+         @Html.Raw("Point Total")
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.pointTotal)
     </div>
+    <div class="display-label">
+         @Html.Raw("Path")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.pathName)
+    </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.isMilestone)
+         @Html.Raw("Start Date")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.startDate)
+    </div>
+
+    <div class="display-label">
+         @Html.Raw("End Date")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.endDate)
+    </div>
+
+    <div class="display-label">
+         @Html.Raw("Milestone?")
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.isMilestone)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.milestoneBonus)
+         @Html.Raw("Milestone Bonus")
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.milestoneBonus)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.solution)
+         @Html.Raw("Solution")
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.solution)

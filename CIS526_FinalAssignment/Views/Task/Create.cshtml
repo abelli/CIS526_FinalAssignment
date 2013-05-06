@@ -12,32 +12,8 @@
     <fieldset>
         <legend>Task</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.pathName)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.pathName)
-            @Html.ValidationMessageFor(model => model.pathName)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.startDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.startDate)
-            @Html.ValidationMessageFor(model => model.startDate)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.endDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.endDate)
-            @Html.ValidationMessageFor(model => model.endDate)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.taskName)
+         <div class="editor-label">
+            @Html.Raw("Task Name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.taskName)
@@ -45,7 +21,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.description)
+            @Html.Raw("Description")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.description)
@@ -53,7 +29,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.pointTotal)
+            @Html.Raw("Point Total")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.pointTotal)
@@ -61,7 +37,31 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.isMilestone)
+            @Html.Raw("Path")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.pathName)
+            @Html.ValidationMessageFor(model => model.pathName)
+        </div>
+
+        <div class="editor-label">
+            @Html.Raw("Start name")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.startDate)
+            @Html.ValidationMessageFor(model => model.startDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.Raw("End Name")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.endDate)
+            @Html.ValidationMessageFor(model => model.endDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.Raw("Milestone?")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.isMilestone)
@@ -69,7 +69,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.milestoneBonus)
+            @Html.Raw("Milestone Bonus")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.milestoneBonus)
@@ -77,7 +77,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.solution)
+            @Html.Raw("Solution")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.solution)
