@@ -7,11 +7,25 @@ using System.Web;
 using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
 using CIS526_FinalAssignment.ViewModels;
+using DotNetCasClient;
 
 namespace CIS526_FinalAssignment.Controllers
 {
     public class LeaderboardController : Controller
     {
+
+        [Authorize]
+        public ActionResult LogOn()
+        {
+            return RedirectToAction("Index", "Leaderboard");
+        }
+
+        public ActionResult LogOff()
+        {
+            CasAuthentication.SingleSignOut();
+            return RedirectToAction("Index", "Leaderboard");
+        }
+
         private PlayerDBContext db = new PlayerDBContext();
         
         //
