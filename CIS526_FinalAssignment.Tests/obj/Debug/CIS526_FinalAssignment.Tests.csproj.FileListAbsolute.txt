@@ -63,3 +63,6 @@ C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment.Test
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\WebGrease.dll
 C:\Users\Matt\worksp\526final\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\WebGrease.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\Antlr3.Runtime.dll

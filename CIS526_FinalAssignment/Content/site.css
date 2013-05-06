@@ -76,3 +76,10 @@ tr:nth-of-type(even)
 	font-weight: bold;
 	color: #A677B4;
 }
+
+.display-label 
+{
+    font-weight: bolder;
+    color: darkgray;
+    font-size: 24px;
+}

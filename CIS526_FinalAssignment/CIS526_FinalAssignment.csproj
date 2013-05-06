@@ -144,6 +144,7 @@
     <Compile Include="Models\Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LeaderBoardScore.cs" />
+    <Compile Include="ViewModels\PlayerTaskVM.cs" />
     <Compile Include="ViewModels\PlayerView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +162,7 @@
     <Content Include="Scripts\jquery-ui-1.10.1.min.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\leaderboard.js" />
+    <Content Include="Scripts\Player.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -246,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Leaderboard\LeaderboardDetailsPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Player\PlayerTaskPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

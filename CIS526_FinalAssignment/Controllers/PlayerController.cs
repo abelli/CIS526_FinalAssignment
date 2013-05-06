@@ -6,18 +6,28 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
+using CIS526_FinalAssignment.ViewModels;
 
 namespace CIS526_FinalAssignment.Controllers
 {
     public class PlayerController : Controller
     {
         private PlayerDBContext db = new PlayerDBContext();
+        public int currentPlayerID = 1; 
 
         //
         // GET: /Player/
 
         public ActionResult Index()
         {
+            PlayerTask pt = new PlayerTask();
+            pt.ID = 1;
+            pt.playerID = 1;
+            pt.taskID = 1;
+            pt.pointsEarned = 50;
+            pt.completionTime = DateTime.Now;
+            db.PlayerTasks.Add(pt);
+            db.SaveChanges();
             return View(db.Players.ToList());
         }
 
@@ -26,10 +36,23 @@ namespace CIS526_FinalAssignment.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            Player player = db.Players.Find(id);
-            if (player == null)
+            Player player = new Player();
+            if (id == -1)
             {
-                return HttpNotFound();
+                player = db.Players.Find(currentPlayerID);
+                if (player == null)
+                {
+                    return HttpNotFound();
+                }
+            }
+
+            else
+            {
+                player = db.Players.Find(id);
+                if (player == null)
+                {
+                    return HttpNotFound();
+                }
             }
             return View(player);
         }
@@ -109,6 +132,30 @@ namespace CIS526_FinalAssignment.Controllers
             db.Players.Remove(player);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        public void CurrentPlayer()
+        {
+            Details(currentPlayerID);
+        }
+
+        [HttpGet, ActionName("GetTasks")]
+        public JsonResult GetTasks(int id)
+        {
+            Player player = db.Players.Find(id);
+            List<PlayerTask> tasks = player.tasksCompleted.OrderBy(t => t.completionTime).ToList();
+            List<PlayerTaskVM> results = new List<PlayerTaskVM>();
+
+            PlayerTaskVM playerVM = new PlayerTaskVM();
+            foreach(PlayerTask pt in tasks)
+            {
+                playerVM.taskID = (int)pt.taskID;
+                playerVM.taskName = pt.task.taskName;
+                playerVM.pointsEarned = pt.pointsEarned;
+                playerVM.completionTime = pt.completionTime;
+                results.Add(playerVM);
+            }
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
         protected override void Dispose(bool disposing)
