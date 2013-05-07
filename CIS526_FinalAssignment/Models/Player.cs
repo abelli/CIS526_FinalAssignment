@@ -29,5 +29,6 @@ namespace CIS526_FinalAssignment.Models
         public DbSet<Task> Tasks { get; set; }
         public DbSet<PlayerTask> PlayerTasks { get; set; }
         public DbSet<PathScore> PathScores { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

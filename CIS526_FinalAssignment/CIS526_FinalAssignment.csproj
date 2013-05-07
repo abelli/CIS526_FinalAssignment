@@ -118,9 +118,18 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\LeaderboardController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\TaskController.cs" />
@@ -139,16 +148,24 @@
     <Compile Include="Migrations\201304300300484_rank field.Designer.cs">
       <DependentUpon>201304300300484_rank field.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305062329224_user accounts.cs" />
+    <Compile Include="Migrations\201305062329224_user accounts.Designer.cs">
+      <DependentUpon>201305062329224_user accounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Leaderboard.cs" />
     <Compile Include="Models\PathScore.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerTask.cs" />
     <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\LeaderBoardScore.cs" />
+    <Compile Include="ViewModels\LocalPasswordModel.cs" />
+    <Compile Include="ViewModels\LoginModel.cs" />
     <Compile Include="ViewModels\PlayerTaskVM.cs" />
     <Compile Include="ViewModels\PlayerView.cs" />
+    <Compile Include="ViewModels\RegisterModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -236,6 +253,9 @@
     <EmbeddedResource Include="Migrations\201304300300484_rank field.resx">
       <DependentUpon>201304300300484_rank field.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305062329224_user accounts.resx">
+      <DependentUpon>201305062329224_user accounts.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -254,6 +274,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Player\PlayerTaskPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Accounts\Delete.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
