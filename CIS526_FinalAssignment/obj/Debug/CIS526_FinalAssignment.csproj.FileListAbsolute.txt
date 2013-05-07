@@ -111,3 +111,4 @@ C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
