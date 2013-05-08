@@ -90,10 +90,14 @@ namespace CIS526_FinalAssignment.Controllers
             ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName", task.pathID);
             return View(task);
         }
+
+        //
+        // GET: /Task2/
         public ActionResult Complete()
         {
             return View(db.Tasks.ToList());
         }
+
         public ActionResult SolveTask(int id)
         {
             Task task = db.Tasks.Find(id);

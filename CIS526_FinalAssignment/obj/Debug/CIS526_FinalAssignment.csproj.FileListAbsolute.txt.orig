@@ -68,6 +68,7 @@ C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssi
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.init.resources
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.rankfield.resources
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.dll
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.pdb
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Antlr3.Runtime.dll
@@ -103,6 +104,29 @@ C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csproj.GenerateResource.Cache
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.dll
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.pdb
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.xml
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path2.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path3.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources
+=======
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.dll
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.pdb
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Antlr3.Runtime.dll
@@ -138,73 +162,4 @@ C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\D
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csproj.GenerateResource.Cache
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.dll
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.pdb
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.dll
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.xml
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
-C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.dll
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetCasClient.xml
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path2.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path3.resources
-C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\CIS526_FinalAssignment.pdb
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\Antlr3.Runtime.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\EntityFramework.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\Newtonsoft.Json.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Net.Http.Formatting.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Helpers.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Http.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Http.WebHost.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Mvc.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Optimization.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Razor.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.Deployment.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.Razor.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\WebGrease.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\EntityFramework.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\Newtonsoft.Json.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Net.Http.Formatting.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Helpers.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Http.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Http.WebHost.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Mvc.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.Razor.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.Deployment.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\System.Web.WebPages.Razor.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csprojResolveAssemblyReference.cache
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.InitialCreate.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.init.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.rankfield.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path2.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path3.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csproj.GenerateResource.Cache
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.dll
-C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.pdb
+>>>>>>> master
