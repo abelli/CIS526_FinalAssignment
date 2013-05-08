@@ -103,3 +103,6 @@ C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\obj\Deb
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.dll
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.pdb
 C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.xml
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.dll
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.pdb
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment.Tests\bin\Debug\DotNetCasClient.xml

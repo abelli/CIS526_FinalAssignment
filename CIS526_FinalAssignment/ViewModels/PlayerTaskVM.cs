@@ -10,7 +10,7 @@ namespace CIS526_FinalAssignment.ViewModels
         public int taskID { get; set; }
         public string taskName { get; set; }
         public int pointsEarned { get; set; }
-        public DateTime completionTime { get; set; }
+        public string completionTime { get; set; }
 
     }
 }

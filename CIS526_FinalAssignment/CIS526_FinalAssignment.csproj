@@ -155,6 +155,22 @@
     <Compile Include="Migrations\201305072353478_removed accounts controller.Designer.cs">
       <DependentUpon>201305072353478_removed accounts controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305080447057_path.cs" />
+    <Compile Include="Migrations\201305080447057_path.Designer.cs">
+      <DependentUpon>201305080447057_path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080503225_path2.cs" />
+    <Compile Include="Migrations\201305080503225_path2.Designer.cs">
+      <DependentUpon>201305080503225_path2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080509249_path3.cs" />
+    <Compile Include="Migrations\201305080509249_path3.Designer.cs">
+      <DependentUpon>201305080509249_path3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080520113_blah2.cs" />
+    <Compile Include="Migrations\201305080520113_blah2.Designer.cs">
+      <DependentUpon>201305080520113_blah2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Leaderboard.cs" />
     <Compile Include="Models\PathScore.cs" />
@@ -259,6 +275,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305072353478_removed accounts controller.resx">
       <DependentUpon>201305072353478_removed accounts controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080447057_path.resx">
+      <DependentUpon>201305080447057_path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080503225_path2.resx">
+      <DependentUpon>201305080503225_path2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080509249_path3.resx">
+      <DependentUpon>201305080509249_path3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080520113_blah2.resx">
+      <DependentUpon>201305080520113_blah2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -4,18 +4,8 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<fieldset>
-    <legend>Task</legend>
-
-    <div class="display-label">
-         @Html.Raw("Task Name")
-    </div>
-
-    <div class="display-field">
-        @Html.DisplayFor(model => model.taskName)
-    </div>
+<fieldset style="margin-top: 40px">
+    <legend>@Html.DisplayFor(model => model.taskName)</legend>
 
     <div class="display-label">
          @Html.Raw("Description")
@@ -34,7 +24,7 @@
          @Html.Raw("Path")
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.pathName)
+        @Html.DisplayFor(model => model.path.pathName)
     </div>
 
     <div class="display-label">
@@ -63,13 +53,6 @@
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.milestoneBonus)
-    </div>
-
-    <div class="display-label">
-         @Html.Raw("Solution")
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.solution)
     </div>
 </fieldset>
 <p>

@@ -81,5 +81,20 @@ tr:nth-of-type(even)
 {
     font-weight: bolder;
     color: darkgray;
-    font-size: 24px;
+    font-size: 20px;
+}
+
+.display-label #playerTask 
+{
+    font-size: 14px;
+}
+
+.display-label #playerMilestone 
+{
+    font-size: 14px;
+}
+
+legend
+{
+    font-size: 30px;
 }

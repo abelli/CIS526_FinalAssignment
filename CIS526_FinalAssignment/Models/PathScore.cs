@@ -18,8 +18,7 @@ namespace CIS526_FinalAssignment.Models
         public int rank { get; set; }
 
         [ForeignKey("playerID")]
-        public Player player
-        { get; set; }
+        public Player player{ get; set; }
 
         [ForeignKey("leaderboardID")]
         public Leaderboard leaderboard { get; set; }
