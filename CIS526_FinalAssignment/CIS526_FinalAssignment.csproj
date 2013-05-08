@@ -310,6 +310,12 @@
   <ItemGroup>
     <Content Include="Views\Shared\LoginPartial.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Task\Complete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Task\SolveTask.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
