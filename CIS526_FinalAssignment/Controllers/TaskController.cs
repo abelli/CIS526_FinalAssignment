@@ -107,8 +107,6 @@ namespace CIS526_FinalAssignment.Controllers
             if (FinishedTask.solution == solution)
             {
 
-
-
                 return View("CorrectAnswer", FinishedTask);
             }
             else

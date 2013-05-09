@@ -138,3 +138,6 @@ C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAs
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csproj.GenerateResource.Cache
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.dll
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.pdb
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.xml
