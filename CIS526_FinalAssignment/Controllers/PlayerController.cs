@@ -52,6 +52,7 @@ namespace CIS526_FinalAssignment.Controllers
                 WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
             }
 
+            WebSecurity.CreateUserAndAccount(p.username, p.password);
             if (!Roles.RoleExists(role))
             {
                 // If not, create one.
