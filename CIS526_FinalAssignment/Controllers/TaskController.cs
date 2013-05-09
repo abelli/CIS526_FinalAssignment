@@ -100,14 +100,23 @@ namespace CIS526_FinalAssignment.Controllers
         }
 
         [HttpPost]
-        public ActionResult SolveTask(string solution)
+        public ActionResult SolveTask(string solution, int ID)
         {
             //check solution
-            return View();
+            Task FinishedTask = db.Tasks.Find(ID);
+            if (FinishedTask.solution == solution)
+            {
+
+
+
+                return View("CorrectAnswer", FinishedTask);
+            }
+            else
+                return View("WrongAnswer", FinishedTask);
         }
         //
         // GET: /Task/Delete/5
-
+        
         public ActionResult Delete(int id = 0)
         {
             Task task = db.Tasks.Find(id);

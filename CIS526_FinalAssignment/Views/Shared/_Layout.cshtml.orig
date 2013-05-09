@@ -13,7 +13,14 @@
     <div id="wrapper">
         <div id="header">
             <div id="nav" style="float: right">
-                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Players", "Index", "Player") | @Html.ActionLink("Tasks", "Complete", "Task") |  @Html.ActionLink("My Profile", "Details", "Player", new { id = -1 }, null)| @Html.ActionLink("Solved Task", "Complete", "Task") 
+<<<<<<< HEAD
+                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Players", "Index", "Player") | @Html.ActionLink("Tasks", "Complete", "Task") |  @Html.ActionLink("My Profile", "Details", "Player", new { id = -1 }, null)
+=======
+                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Players", "Index", "Player") | @Html.ActionLink("Tasks", "Index", "Task") |  @Html.ActionLink("My Profile", "Details", "Player", new { id = -1 }, null)
+            </div><br />
+            <div id="authenticate" style="float: right">
+                 @Html.Partial("LoginPartial")
+>>>>>>> origin/master
             </div>
         </div>
         @RenderBody()
