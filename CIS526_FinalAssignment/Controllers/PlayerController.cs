@@ -7,13 +7,44 @@ using System.Web;
 using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
 using CIS526_FinalAssignment.ViewModels;
+using DotNetCasClient;
 
 namespace CIS526_FinalAssignment.Controllers
 {
     public class PlayerController : Controller
     {
         private PlayerDBContext db = new PlayerDBContext();
-        public int currentPlayerID = 1; 
+        public int currentPlayerID = 1;
+
+        [Authorize]
+        public ActionResult LogOn()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                List<Player> players = db.Players.ToList();
+                foreach (Player player in players)
+                {
+                    if (User.Identity.Name.Equals(player.username))
+                    {
+                        return RedirectToAction("Index", "Leaderboard");
+                    }
+                }
+
+                Player p = new Player();
+                p.username = User.Identity.Name;
+                p.password = "testpassword";
+                p.isFrozen = false;
+                db.Players.Add(p);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index", "Leaderboard");
+        }
+
+        public ActionResult LogOff()
+        {
+            CasAuthentication.SingleSignOut();
+            return RedirectToAction("Index", "Leaderboard");
+        }
 
         //
         // GET: /Player/
@@ -23,7 +54,7 @@ namespace CIS526_FinalAssignment.Controllers
             PlayerTask pt = new PlayerTask();
             pt.ID = 1;
             pt.playerID = 1;
-            pt.taskID = 1;
+            pt.taskID = 2;
             pt.pointsEarned = 50;
             pt.completionTime = DateTime.Now;
             db.PlayerTasks.Add(pt);
@@ -33,6 +64,23 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Player/Details/5
+
+        public ActionResult Manage()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                List<Player> players = db.Players.ToList();
+                foreach (Player player in players)
+                {
+                    if (User.Identity.Name.Equals(player.username))
+                    {
+                        return View(player);
+                    }
+                }
+            }
+
+            return Index();
+        }
 
         public ActionResult Details(int id = 0)
         {
@@ -149,14 +197,45 @@ namespace CIS526_FinalAssignment.Controllers
             PlayerTaskVM playerVM = new PlayerTaskVM();
             foreach(PlayerTask pt in tasks)
             {
-                playerVM.taskID = (int)pt.taskID;
-                playerVM.taskName = pt.task.taskName;
-                playerVM.pointsEarned = pt.pointsEarned;
-                playerVM.completionTime = pt.completionTime;
-                results.Add(playerVM);
+                if (!pt.task.isMilestone)
+                {
+                    playerVM.taskID = (int)pt.taskID;
+                    playerVM.taskName = pt.task.taskName;
+                    playerVM.pointsEarned = pt.pointsEarned;
+                    playerVM.completionTime = pt.completionTime.Month + "/" + pt.completionTime.Day + "/" + pt.completionTime.Year;
+                    results.Add(playerVM);
+                }
             }
+            results = results.OrderBy(s => s.completionTime).ToList();
+
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
         }
+
+
+        [HttpGet, ActionName("GetMilestones")]
+        public JsonResult GetMilestones(int id)
+        {
+            Player player = db.Players.Find(id);
+            List<PlayerTask> tasks = player.tasksCompleted.OrderBy(t => t.completionTime).ToList();
+            List<PlayerTaskVM> results = new List<PlayerTaskVM>();
+
+            PlayerTaskVM playerVM = new PlayerTaskVM();
+            foreach (PlayerTask pt in tasks)
+            {
+                if (pt.task.isMilestone)
+                {
+                    playerVM.taskID = (int)pt.taskID;
+                    playerVM.taskName = pt.task.taskName;
+                    playerVM.pointsEarned = pt.pointsEarned;
+                    playerVM.completionTime = pt.completionTime.Month + "/" + pt.completionTime.Day + "/" + pt.completionTime.Year;
+                    results.Add(playerVM);
+                }
+            }
+            results = results.OrderBy(s => s.completionTime).ToList();
+
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
 
         protected override void Dispose(bool disposing)
         {

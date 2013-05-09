@@ -3,22 +3,26 @@
     ViewBag.Title = "Complete";
 }
 
-<h2>CompleteTask</h2>
+<h2>Complete Task</h2>
  
 @foreach (var item in Model) {
     <p>
+        
             @Html.DisplayFor(modelItem => item.taskName)
+
+            @Html.Raw("Points:")
        
             @Html.DisplayFor(modelItem => item.pointTotal)
         
             @Html.DisplayFor(modelItem => item.isMilestone)
-       
+
+            @Html.Raw("Milestone Bonus:")
+        
             @Html.DisplayFor(modelItem => item.milestoneBonus)
    
 
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "SolveTask", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Solve", "SolveTask", new { id=item.ID }) 
+
         
     </p>
 }

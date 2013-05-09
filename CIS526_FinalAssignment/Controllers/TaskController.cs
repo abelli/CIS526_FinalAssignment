@@ -14,15 +14,16 @@ namespace CIS526_FinalAssignment.Controllers
         private PlayerDBContext db = new PlayerDBContext();
 
         //
-        // GET: /Task/
+        // GET: /Task2/
 
         public ActionResult Index()
         {
-            return View(db.Tasks.ToList());
+            var tasks = db.Tasks.Include(t => t.path);
+            return View(tasks.ToList());
         }
 
         //
-        // GET: /Task/Details/5
+        // GET: /Task2/Details/5
 
         public ActionResult Details(int id = 0)
         {
@@ -35,15 +36,16 @@ namespace CIS526_FinalAssignment.Controllers
         }
 
         //
-        // GET: /Task/Create
+        // GET: /Task2/Create
 
         public ActionResult Create()
         {
+            ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName");
             return View();
         }
 
         //
-        // POST: /Task/Create
+        // POST: /Task2/Create
 
         [HttpPost]
         public ActionResult Create(Task task)
@@ -55,11 +57,12 @@ namespace CIS526_FinalAssignment.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName", task.pathID);
             return View(task);
         }
 
         //
-        // GET: /Task/Edit/5
+        // GET: /Task2/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
@@ -68,11 +71,12 @@ namespace CIS526_FinalAssignment.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName", task.pathID);
             return View(task);
         }
 
         //
-        // POST: /Task/Edit/5
+        // POST: /Task2/Edit/5
 
         [HttpPost]
         public ActionResult Edit(Task task)
@@ -83,12 +87,17 @@ namespace CIS526_FinalAssignment.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName", task.pathID);
             return View(task);
         }
+
+        //
+        // GET: /Task2/
         public ActionResult Complete()
         {
             return View(db.Tasks.ToList());
         }
+
         public ActionResult SolveTask(int id)
         {
             Task task = db.Tasks.Find(id);
@@ -113,7 +122,7 @@ namespace CIS526_FinalAssignment.Controllers
                 return View("WrongAnswer", FinishedTask);
         }
         //
-        // GET: /Task/Delete/5
+        // GET: /Task2/Delete/5
         
         public ActionResult Delete(int id = 0)
         {
@@ -126,7 +135,7 @@ namespace CIS526_FinalAssignment.Controllers
         }
 
         //
-        // POST: /Task/Delete/5
+        // POST: /Task2/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)

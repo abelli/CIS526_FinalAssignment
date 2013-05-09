@@ -19,3 +19,20 @@ $.get(host + "/Player/GetTasks/" + playerId, function (data) {
     }
 
 });
+
+$.get(host + "/Player/GetMilestones/" + playerId, function (data) {
+    var count = 1;
+
+    for (i in data) {
+        tasks.push(data[i]);
+        count++;
+        $('#playerMilestone').append('<tr><td class="playerTask">' +
+			'<a href="' + host + '/Task/Details/' + data[i].taskID + '">' + data[i].taskName + '</a>' +
+			'</td><td class="playerTask" id="pointsEarned">' +
+			data[i].pointsEarned +
+			'</td><td class="playerTask">' +
+			data[i].completionTime +
+			'</td>');
+    }
+
+});

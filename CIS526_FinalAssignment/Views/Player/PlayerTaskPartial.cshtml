@@ -1,11 +1,9 @@
 ﻿@model CIS526_FinalAssignment.Models.Player
 
-<h2>@Html.DisplayFor(model => model.username)</h2>
-<hr/>
 
 <input id="playerId" hidden="true" value="@Model.ID" />
-
-<table style="margin-top: 50px" id="playerTask">
+@Html.Raw("Completed Tasks")
+<table style="margin-top: 5px" id="playerTask">
   <tr>
     <th width="125px">
         Task Name
@@ -19,6 +17,29 @@
   </tr>
 </table>
 <table id="playerTask">
+    <th width="125px">
+    </th>
+    <th width="300px">
+    </th>
+    <th width="175px">
+    </th>
+</table>
+
+<p>@Html.Raw("Completed Milestones")</p>
+<table style="margin-top: 5px" id="playerMilestone">
+  <tr>
+    <th width="125px">
+        Task Name
+    </th>
+    <th width="300px">
+        Points Earned
+    </th>
+    <th width="175px">
+        Completion Time
+    </th>
+  </tr>
+</table>
+<table id="playerMilestone">
     <th width="125px">
     </th>
     <th width="300px">

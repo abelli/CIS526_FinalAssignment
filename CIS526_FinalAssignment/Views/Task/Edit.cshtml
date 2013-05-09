@@ -42,12 +42,12 @@
             @Html.Raw("Path")
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.pathName)
-            @Html.ValidationMessageFor(model => model.pathName)
+            @Html.DropDownList("pathID", String.Empty)
+            @Html.ValidationMessageFor(model => model.pathID)
         </div>
 
         <div class="editor-label">
-            @Html.Raw("Start name")
+            @Html.Raw("Start Date")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.startDate)
@@ -55,7 +55,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.Raw("End Name")
+            @Html.Raw("End Date")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.endDate)

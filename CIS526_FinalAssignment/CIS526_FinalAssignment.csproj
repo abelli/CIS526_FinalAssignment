@@ -42,6 +42,9 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetCasClient">
+      <HintPath>..\packages\DotNetCasClient.1.0.1\lib\DotNetCasClient.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -118,6 +121,14 @@
     <Reference Include="WebGrease">
       <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -138,6 +149,30 @@
     <Compile Include="Migrations\201304300300484_rank field.cs" />
     <Compile Include="Migrations\201304300300484_rank field.Designer.cs">
       <DependentUpon>201304300300484_rank field.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305062329224_user accounts.cs" />
+    <Compile Include="Migrations\201305062329224_user accounts.Designer.cs">
+      <DependentUpon>201305062329224_user accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305072353478_removed accounts controller.cs" />
+    <Compile Include="Migrations\201305072353478_removed accounts controller.Designer.cs">
+      <DependentUpon>201305072353478_removed accounts controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080447057_path.cs" />
+    <Compile Include="Migrations\201305080447057_path.Designer.cs">
+      <DependentUpon>201305080447057_path.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080503225_path2.cs" />
+    <Compile Include="Migrations\201305080503225_path2.Designer.cs">
+      <DependentUpon>201305080503225_path2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080509249_path3.cs" />
+    <Compile Include="Migrations\201305080509249_path3.Designer.cs">
+      <DependentUpon>201305080509249_path3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201305080520113_blah2.cs" />
+    <Compile Include="Migrations\201305080520113_blah2.Designer.cs">
+      <DependentUpon>201305080520113_blah2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Leaderboard.cs" />
@@ -166,7 +201,9 @@
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\leaderboard.js" />
     <Content Include="Scripts\Player.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -236,6 +273,24 @@
     <EmbeddedResource Include="Migrations\201304300300484_rank field.resx">
       <DependentUpon>201304300300484_rank field.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305062329224_user accounts.resx">
+      <DependentUpon>201305062329224_user accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305072353478_removed accounts controller.resx">
+      <DependentUpon>201305072353478_removed accounts controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080447057_path.resx">
+      <DependentUpon>201305080447057_path.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080503225_path2.resx">
+      <DependentUpon>201305080503225_path2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080509249_path3.resx">
+      <DependentUpon>201305080509249_path3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305080520113_blah2.resx">
+      <DependentUpon>201305080520113_blah2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -254,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Player\PlayerTaskPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\Complete.cshtml" />

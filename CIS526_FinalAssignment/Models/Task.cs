@@ -13,7 +13,6 @@ namespace CIS526_FinalAssignment.Models
     {
         [Key]
         public int ID { get; set; }
-        public string pathName { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
         public byte[] Image { get; set; }
@@ -24,6 +23,9 @@ namespace CIS526_FinalAssignment.Models
         public int milestoneBonus { get; set; }
         public string solution { get; set; }
 
+        public int? pathID { get; set; }
+
+        public virtual Leaderboard path { get; set; }
         public virtual ICollection<PlayerTask> playersCompleted { get; set; }
     }
 }
