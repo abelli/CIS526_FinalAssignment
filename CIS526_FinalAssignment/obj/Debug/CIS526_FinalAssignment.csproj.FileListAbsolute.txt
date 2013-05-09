@@ -141,3 +141,16 @@ C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAs
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.dll
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.pdb
 C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.xml
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.dll
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\WebMatrix.Data.dll
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\WebMatrix.WebData.dll
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.pdb
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\DotNetCasClient.xml
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\WebMatrix.Data.xml
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\bin\WebMatrix.WebData.xml
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.useraccounts.resources
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.removedaccountscontroller.resources
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path.resources
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path2.resources
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path3.resources
+C:\Users\AbdulRasheed Yahaya\CIS526_FinalAssignment - Copy - Copy\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources

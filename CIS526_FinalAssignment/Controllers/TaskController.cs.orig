@@ -109,31 +109,12 @@ namespace CIS526_FinalAssignment.Controllers
         }
 
         [HttpPost]
-        //[Authorize(Roles="admin")]
         public ActionResult SolveTask(string solution, int ID)
         {
             //check solution
             Task FinishedTask = db.Tasks.Find(ID);
             if (FinishedTask.solution == solution)
             {
-                Player p = db.Players.First(pl => pl.username == User.Identity.Name);
-                //Check if player is frozen
-                if (p.isFrozen==true)
-                    p.frozenPoints += FinishedTask.pointTotal;
-                else
-                    p.totalScore += FinishedTask.pointTotal;
-                   
-                //Update Task & Total Score. 
-                db.Entry(p).State = EntityState.Modified;
-                db.SaveChanges();
-                db.Entry(FinishedTask).State = EntityState.Modified;
-                db.SaveChanges();
-
-                //Check if milestone. //milestone bonus plus the 1st 10 students points
-               // if (FinishedTask.isMilestone == true ||)
-               //     FinishedTask.milestoneBonus += FinishedTask.pointTotal;
-              //  else
-              //      FinishedTask.milestoneBonus += FinishedTask.pointTotal;
 
                 return View("CorrectAnswer", FinishedTask);
             }
@@ -141,8 +122,13 @@ namespace CIS526_FinalAssignment.Controllers
                 return View("WrongAnswer", FinishedTask);
         }
         //
-        // GET: /Task2/Delete/5
+<<<<<<< HEAD
+        // GET: /Task/Delete/5
         
+=======
+        // GET: /Task2/Delete/5
+
+>>>>>>> origin/master
         public ActionResult Delete(int id = 0)
         {
             Task task = db.Tasks.Find(id);
