@@ -20,10 +20,6 @@ namespace CIS526_FinalAssignment.Controllers
         [Authorize]
         public ActionResult LogOn()
         {
-            if (!WebSecurity.Initialized)
-            {
-                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
-            }
 
             if (User.Identity.IsAuthenticated)
             {

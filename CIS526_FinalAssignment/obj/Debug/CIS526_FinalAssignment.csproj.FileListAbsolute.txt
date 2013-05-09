@@ -227,3 +227,6 @@ C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssi
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.dll
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.pdb
 C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.csprojResolveAssemblyReference.cache
+C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.xml

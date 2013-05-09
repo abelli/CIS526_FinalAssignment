@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
 using CIS526_FinalAssignment.ViewModels;
 using DotNetCasClient;
+using WebMatrix.WebData;
 
 namespace CIS526_FinalAssignment.Controllers
 {
@@ -33,6 +34,10 @@ namespace CIS526_FinalAssignment.Controllers
 
         public ActionResult Index()
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
             return View(db.Leaderboards.ToList());
         }
 
