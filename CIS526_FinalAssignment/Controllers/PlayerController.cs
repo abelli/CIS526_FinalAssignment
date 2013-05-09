@@ -20,11 +20,17 @@ namespace CIS526_FinalAssignment.Controllers
         [Authorize]
         public ActionResult LogOn()
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
+
             if (User.Identity.IsAuthenticated)
             {
                 try
                 {
                     Player p = db.Players.First(pl => pl.username == User.Identity.Name);
+                    if (!WebSecurity.UserExists(p.username)) WebSecurity.CreateUserAndAccount(p.username, p.password);
                     if (p.username == "admin") assignAdmin(p);
                     return RedirectToAction("Index", "Leaderboard");
                 }
@@ -37,6 +43,7 @@ namespace CIS526_FinalAssignment.Controllers
                     p.isFrozen = false;
                     db.Players.Add(p);
                     db.SaveChanges();
+                    if(!WebSecurity.UserExists(p.username)) WebSecurity.CreateUserAndAccount(p.username, p.password);
                     if(p.username == "admin") assignAdmin(p);
                 }
             }
@@ -47,12 +54,7 @@ namespace CIS526_FinalAssignment.Controllers
         {
             string role = "admin";
 
-            if (!WebSecurity.Initialized)
-            {
-                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
-            }
-
-            WebSecurity.CreateUserAndAccount(p.username, p.password);
+           // WebSecurity.CreateUserAndAccount(p.username, p.password);
             if (!Roles.RoleExists(role))
             {
                 // If not, create one.
@@ -60,7 +62,7 @@ namespace CIS526_FinalAssignment.Controllers
             }
 
             // Add the current user to this role
-            Roles.AddUserToRole(p.username, role);
+            if(!Roles.IsUserInRole(p.username)) Roles.AddUserToRole(p.username, role);
         }
 
         public ActionResult LogOff()
@@ -71,7 +73,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Player/
-        [Authorize(Roles="admin")]
+        [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
             PlayerTask pt = new PlayerTask();
@@ -108,7 +110,7 @@ namespace CIS526_FinalAssignment.Controllers
         public ActionResult Details(int id = 0)
         {
             Player player = new Player();
-            if (id == -1)
+            if (id == -1 || id==0)
             {
                 try { player = db.Players.First(pl => pl.username == User.Identity.Name); }
                 catch(Exception e){ return HttpNotFound();}

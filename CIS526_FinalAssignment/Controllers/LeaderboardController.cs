@@ -52,7 +52,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Create
-
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -62,6 +62,7 @@ namespace CIS526_FinalAssignment.Controllers
         // POST: /Leaderboard/Create
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Create(Leaderboard leaderboard)
         {
             if (ModelState.IsValid)
@@ -76,7 +77,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Edit/5
-
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int id = 0)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
@@ -91,6 +92,7 @@ namespace CIS526_FinalAssignment.Controllers
         // POST: /Leaderboard/Edit/5
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(Leaderboard leaderboard)
         {
             if (ModelState.IsValid)
@@ -104,7 +106,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Delete/5
-
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int id = 0)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
@@ -117,7 +119,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // POST: /Leaderboard/Delete/5
-
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
