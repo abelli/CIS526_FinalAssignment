@@ -10,7 +10,7 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Player</legend>
+        <legend>@Html.DisplayFor(model => model.username)</legend>
 
         @Html.HiddenFor(model => model.ID)
 

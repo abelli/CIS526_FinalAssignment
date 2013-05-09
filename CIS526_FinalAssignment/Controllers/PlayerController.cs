@@ -8,36 +8,58 @@ using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
 using CIS526_FinalAssignment.ViewModels;
 using DotNetCasClient;
+using System.Web.Security;
+using WebMatrix.WebData;
 
 namespace CIS526_FinalAssignment.Controllers
 {
     public class PlayerController : Controller
     {
         private PlayerDBContext db = new PlayerDBContext();
-        public int currentPlayerID = 1;
 
         [Authorize]
         public ActionResult LogOn()
         {
             if (User.Identity.IsAuthenticated)
             {
-                List<Player> players = db.Players.ToList();
-                foreach (Player player in players)
+                try
                 {
-                    if (User.Identity.Name.Equals(player.username))
-                    {
-                        return RedirectToAction("Index", "Leaderboard");
-                    }
+                    Player p = db.Players.First(pl => pl.username == User.Identity.Name);
+                    if (p.username == "admin") assignAdmin(p);
+                    return RedirectToAction("Index", "Leaderboard");
                 }
 
-                Player p = new Player();
-                p.username = User.Identity.Name;
-                p.password = "testpassword";
-                p.isFrozen = false;
-                db.Players.Add(p);
-                db.SaveChanges();
+                catch(Exception e)
+                {
+                    Player p = new Player();
+                    p.username = User.Identity.Name;
+                    p.password = "testpassword";
+                    p.isFrozen = false;
+                    db.Players.Add(p);
+                    db.SaveChanges();
+                    if(p.username == "admin") assignAdmin(p);
+                }
             }
             return RedirectToAction("Index", "Leaderboard");
+        }
+
+        public void assignAdmin(Player p)
+        {
+            string role = "admin";
+
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
+
+            if (!Roles.RoleExists(role))
+            {
+                // If not, create one.
+                Roles.CreateRole(role);
+            }
+
+            // Add the current user to this role
+            Roles.AddUserToRole(p.username, role);
         }
 
         public ActionResult LogOff()
@@ -48,7 +70,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Player/
-
+        [Authorize(Roles="admin")]
         public ActionResult Index()
         {
             PlayerTask pt = new PlayerTask();
@@ -87,11 +109,8 @@ namespace CIS526_FinalAssignment.Controllers
             Player player = new Player();
             if (id == -1)
             {
-                player = db.Players.Find(currentPlayerID);
-                if (player == null)
-                {
-                    return HttpNotFound();
-                }
+                try { player = db.Players.First(pl => pl.username == User.Identity.Name); }
+                catch(Exception e){ return HttpNotFound();}
             }
 
             else
@@ -180,11 +199,6 @@ namespace CIS526_FinalAssignment.Controllers
             db.Players.Remove(player);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        public void CurrentPlayer()
-        {
-            Details(currentPlayerID);
         }
 
         [HttpGet, ActionName("GetTasks")]
