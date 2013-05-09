@@ -309,13 +309,13 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
-    <Content Include="Views\Shared\LoginPartial.cshtml" />
-=======
     <Content Include="Views\Task\Complete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\SolveTask.cshtml" />
->>>>>>> master
+=======
+    <Content Include="Views\Shared\LoginPartial.cshtml" />
+>>>>>>> origin/master
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
