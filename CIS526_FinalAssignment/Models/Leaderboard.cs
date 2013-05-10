@@ -15,5 +15,6 @@ namespace CIS526_FinalAssignment.Models
         public string pathName { get; set; }
 
         public virtual ICollection<PathScore> scores { get; set; }
+        //
     }
 }
