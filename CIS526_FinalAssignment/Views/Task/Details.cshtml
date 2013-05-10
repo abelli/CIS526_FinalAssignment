@@ -54,6 +54,13 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.milestoneBonus)
     </div>
+
+    <div class="display-label">
+         @Html.Raw("Icon File Name")
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.image)
+    </div>
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |

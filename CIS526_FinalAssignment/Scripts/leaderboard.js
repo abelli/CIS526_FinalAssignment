@@ -22,6 +22,11 @@ $.get(host + "/Leaderboard/GetTopTen/" + boardId, function(data) {
 	var count = 1;
 
 	for (i in data) {
+		var icontag = '';
+		for (j in data[i].tasks) {
+			icontag = icontag.concat('<img src="' + host + '/Content/images/icons/' + data[i].tasks[j].image + '" width="20px" height="20px" alt="' + data[i].tasks[j].task +'">');
+		}
+		
 		topTen.push(data[i]);       
 		count++;
 		$('#topTen').append('<tr><td class="topTen">' + 
@@ -30,14 +35,9 @@ $.get(host + "/Leaderboard/GetTopTen/" + boardId, function(data) {
 			data[i].userName +
 			'</td><td class="topTen">' +
 			data[i].score +
-			'</td><td class="topTen">'
-			+ '<img src="' + host + '/Content/images/icons/Gate1.png" width="20px" height="18px" alt="Achievement 1">'
-			+ '<img src="' + host + '/Content/images/icons/key1.png" width="28px" height="12px" alt="Achievement 2">'
-			+ '<img src="' + host + '/Content/images/icons/Gate2.png" width="20px" height="18px" alt="Achievement 3">'
-			+ '<img src="' + host + '/Content/images/icons/key2.png" width="28px" height="12px" alt="Achievement 4">'
-			+ '<img src="' + host + '/Content/images/icons/Gate3.png" width="20px" height="18px" alt="Achievement 5">'
-			+ '<img src="' + host + '/Content/images/icons/key3.png" width="28px" height="12px" alt="Achievement 6">'
-			+ '<img src="' + host + '/Content/images/icons/quarter.png" width="20px" height="20px" alt="Achievement 7"></td></tr>');
+			'</td><td class="topTen">' +
+			icontag +
+			'</td></tr>');
 	}
 
 	if (count < 11) {
@@ -51,6 +51,11 @@ function getScores() {
 		var temp = rank;
 		if (rank >= 11) {
 			for (i in data) {
+				var icontag = '';
+				for (j in data[i].tasks) {
+					icontag = icontag.concat('<img src="' + host + '/Content/images/icons/' + data[i].tasks[j].image + '" width="20px" height="20px" alt="' + data[i].tasks[j].task +'">');
+				}	
+
 				scores.push(data[i]);
 				$('#scoreboard').append('<tr><td class="score">' + 
 					data[i].rank +
@@ -58,14 +63,9 @@ function getScores() {
 					data[i].userName +
 					'</td><td class="score">' +
 					data[i].score +
-					'</td><td class="topTen">'
-					+ '<img src="' + host + '/Content/images/icons/Gate1.png" width="20px" height="18px" alt="Achievement 1">'
-					+ '<img src="' + host + '/Content/images/icons/key1.png" width="28px" height="12px" alt="Achievement 2">'
-					+ '<img src="' + host + '/Content/images/icons/Gate2.png" width="20px" height="18px" alt="Achievement 3">'
-					+ '<img src="' + host + '/Content/images/icons/key2.png" width="28px" height="12px" alt="Achievement 4">'
-					+ '<img src="' + host + '/Content/images/icons/Gate3.png" width="20px" height="18px" alt="Achievement 5">'
-					+ '<img src="' + host + '/Content/images/icons/key3.png" width="28px" height="12px" alt="Achievement 6">'
-					+ '<img src="' + host + '/Content/images/icons/quarter.png" width="20px" height="20px" alt="Achievement 7"></td></tr>');
+					'</td><td class="score">' + 
+					icontag +
+					'</td></tr>');
 				rank++;
 			}
 

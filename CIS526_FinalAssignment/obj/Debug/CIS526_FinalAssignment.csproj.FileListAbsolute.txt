@@ -230,3 +230,30 @@ C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssi
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.dll
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.pdb
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path.resources
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path2.resources
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.path3.resources
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.Core.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\System.Transactions.Workflows.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Mono.Math.dll
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.Core.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.pdb
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Gma.QrCodeNet.Encoding.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\bin\Mono.Math.xml
+C:\Users\Matt\worksp\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.iconstring.resources

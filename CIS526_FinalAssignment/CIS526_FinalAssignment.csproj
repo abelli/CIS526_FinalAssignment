@@ -201,6 +201,10 @@
     <Compile Include="Migrations\201305080520113_blah2.Designer.cs">
       <DependentUpon>201305080520113_blah2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305100416077_icon string.cs" />
+    <Compile Include="Migrations\201305100416077_icon string.Designer.cs">
+      <DependentUpon>201305100416077_icon string.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Leaderboard.cs" />
@@ -212,6 +216,7 @@
     <Compile Include="ViewModels\LeaderBoardScore.cs" />
     <Compile Include="ViewModels\PlayerTaskVM.cs" />
     <Compile Include="ViewModels\PlayerView.cs" />
+    <Compile Include="ViewModels\TaskView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -318,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305080520113_blah2.resx">
       <DependentUpon>201305080520113_blah2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305100416077_icon string.resx">
+      <DependentUpon>201305100416077_icon string.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

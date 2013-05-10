@@ -160,6 +160,18 @@ namespace CIS526_FinalAssignment.Controllers
                 score.score = cur.score;
                 score.rank = cur.rank;
                 Player player = db.Players.Find(cur.playerID);
+                List<TaskView> tasks = new List<TaskView>();
+                foreach (PlayerTask pt in player.tasksCompleted)
+                {
+                    TaskView tv = new TaskView();
+                    tv.image = pt.task.image;
+                    tv.task = pt.task.taskName;
+                    tv.taskId = pt.task.ID;
+
+                    tasks.Add(tv);
+                }
+                score.tasks = tasks.ToArray();
+
                 score.userName = player.username;
                 score.leaderboard = leaderboard.pathName;
                 results.Add(score);
@@ -187,6 +199,17 @@ namespace CIS526_FinalAssignment.Controllers
                 score.score = cur.score;
                 score.rank = cur.rank;
                 Player player = db.Players.Find(cur.playerID);
+                List<TaskView> tasks = new List<TaskView>();
+                foreach (PlayerTask pt in player.tasksCompleted)
+                {
+                    TaskView tv = new TaskView();
+                    tv.image = pt.task.image;
+                    tv.task = pt.task.taskName;
+                    tv.taskId = pt.task.ID;
+
+                    tasks.Add(tv);
+                }
+                score.tasks = tasks.ToArray();
                 score.userName = player.username;
                 score.leaderboard = leaderboard.pathName;
                 results.Add(score);
@@ -210,6 +233,21 @@ namespace CIS526_FinalAssignment.Controllers
                 results.Add(res);
             }
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet, ActionName("GetIcons")]
+        public JsonResult GetIcons(int id)
+        {
+            Player player = db.Players.Find(id);
+            List<string> icons = new List<string>();
+
+            foreach (PlayerTask t in player.tasksCompleted)
+            {
+                string s = t.task.image;
+                icons.Add(s);
+            }
+
+            return Json(icons.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
         public void Rank(Leaderboard board)
