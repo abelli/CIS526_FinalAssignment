@@ -17,9 +17,14 @@ namespace CIS526_FinalAssignment.Controllers
     {
         private PlayerDBContext db = new PlayerDBContext();
 
+
         [Authorize]
         public ActionResult LogOn()
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
 
             if (User.Identity.IsAuthenticated)
             {

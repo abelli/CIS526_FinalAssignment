@@ -46,6 +46,11 @@ namespace CIS526_FinalAssignment.Controllers
 
         public ActionResult Details(int id = 0)
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
+
             Leaderboard leaderboard = db.Leaderboards.Find(id);
             Rank(leaderboard);
             if (leaderboard == null)
