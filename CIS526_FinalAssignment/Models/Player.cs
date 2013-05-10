@@ -17,6 +17,7 @@ namespace CIS526_FinalAssignment.Models
         public int totalScore { get; set; }
         public bool isFrozen { get; set; }
         public int frozenPoints { get; set; }
+        public bool hasChanged { get; set; }
 
         public virtual ICollection<PathScore> gamesScores { get; set; }
         public virtual ICollection<PlayerTask> tasksCompleted { get; set; }

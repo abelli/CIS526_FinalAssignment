@@ -22,6 +22,9 @@ namespace CIS526_FinalAssignment.App_Start
             bundles.Add(new ScriptBundle("~/bundles/Player").Include(
                         "~/Scripts/Player.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/ChangedPlayers").Include(
+                        "~/Scripts/ChangedPlayers.js"));
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
         }

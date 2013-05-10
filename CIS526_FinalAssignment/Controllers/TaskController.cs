@@ -149,7 +149,7 @@ namespace CIS526_FinalAssignment.Controllers
                             ps.score += pt.pointsEarned;
                         }
 
-                        catch (Exception e)
+                        catch (InvalidOperationException e)
                         {
                             ps = new PathScore();
                             ps.leaderboardID = FinishedTask.pathID;
@@ -161,14 +161,13 @@ namespace CIS526_FinalAssignment.Controllers
                         }
                     }
 
-                    //Update Task & Total Score. 
                     db.PlayerTasks.Add(pt);
                     db.Entry(p).State = EntityState.Modified;
                     db.SaveChanges();
                     db.Entry(FinishedTask).State = EntityState.Modified;
                     db.SaveChanges();
                 }
-                catch (Exception e)
+                catch (InvalidOperationException e)
                 {
                     return View("WrongAnswer", FinishedTask);
                 }

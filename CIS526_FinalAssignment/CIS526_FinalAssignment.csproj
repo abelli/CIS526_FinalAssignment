@@ -209,6 +209,10 @@
     <Compile Include="Migrations\201305100555213_mig.Designer.cs">
       <DependentUpon>201305100555213_mig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305102005435_player.cs" />
+    <Compile Include="Migrations\201305102005435_player.Designer.cs">
+      <DependentUpon>201305102005435_player.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Leaderboard.cs" />
@@ -231,6 +235,7 @@
     <Content Include="Content\images\icons\quarter.png" />
     <Content Include="Content\site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\ChangedPlayers.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.10.1.js" />
@@ -334,6 +339,9 @@
     <EmbeddedResource Include="Migrations\201305100555213_mig.resx">
       <DependentUpon>201305100555213_mig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305102005435_player.resx">
+      <DependentUpon>201305102005435_player.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -367,6 +375,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Task\WrongAnswer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Player\ChangedPlayerPartial.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

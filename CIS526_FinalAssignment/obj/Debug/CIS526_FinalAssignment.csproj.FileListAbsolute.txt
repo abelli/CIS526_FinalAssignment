@@ -191,3 +191,4 @@ C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssi
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.blah2.resources
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.iconstring.resources
 C:\Users\Andrew Bellinder\documents\visual studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.mig.resources
+C:\Users\Andrew Bellinder\Documents\Visual Studio 2012\Projects\CIS526_FinalAssignment\CIS526_FinalAssignment\obj\Debug\CIS526_FinalAssignment.Migrations.player.resources

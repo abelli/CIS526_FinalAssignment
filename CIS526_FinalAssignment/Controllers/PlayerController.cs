@@ -36,12 +36,13 @@ namespace CIS526_FinalAssignment.Controllers
                     return RedirectToAction("Index", "Leaderboard");
                 }
 
-                catch(Exception e)
+                catch (InvalidOperationException e)
                 {
                     Player p = new Player();
                     p.username = User.Identity.Name;
                     p.password = "testpassword";
                     p.isFrozen = false;
+                    p.hasChanged = false;
                     db.Players.Add(p);
                     db.SaveChanges();
                     if(!WebSecurity.UserExists(p.username)) WebSecurity.CreateUserAndAccount(p.username, p.password);
@@ -163,6 +164,10 @@ namespace CIS526_FinalAssignment.Controllers
         [HttpPost]
         public ActionResult Edit(Player player)
         {
+
+                player.hasChanged = true;
+
+
             if (ModelState.IsValid)
             {
                 db.Entry(player).State = EntityState.Modified;
@@ -245,6 +250,26 @@ namespace CIS526_FinalAssignment.Controllers
 
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
         }
+
+        [HttpGet, ActionName("GetChangedPlayers")]
+        public JsonResult GetChangedPlayers()
+        {
+            var players = db.Players.Where(pl => pl.hasChanged == true); ;
+            List<PlayerView> results = new List<PlayerView>();
+
+            PlayerView playerView = new PlayerView();
+            foreach (Player p in players)
+            {
+                playerView.ID = p.ID;
+                playerView.isFrozen = p.isFrozen;
+                playerView.totalScore = p.totalScore;
+                playerView.username = p.username;
+                results.Add(playerView);
+            }
+
+            return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
 
 
         protected override void Dispose(bool disposing)
