@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201305102005435_player.Designer.cs">
       <DependentUpon>201305102005435_player.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305102253221_cascading deletes.cs" />
+    <Compile Include="Migrations\201305102253221_cascading deletes.Designer.cs">
+      <DependentUpon>201305102253221_cascading deletes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Leaderboard.cs" />
@@ -341,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305102005435_player.resx">
       <DependentUpon>201305102005435_player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305102253221_cascading deletes.resx">
+      <DependentUpon>201305102253221_cascading deletes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
