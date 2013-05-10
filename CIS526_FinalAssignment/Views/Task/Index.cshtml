@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<CIS526_FinalAssignment.Models.Task>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tasks";
 }
 
-<h2>Index</h2>
+<h2>Tasks</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,9 +35,7 @@
         <th>
             @Html.Raw("Milestone Bonus")
         </th>
-        <th>
-             @Html.Raw("Solution")
-        </th>
+        <th>Solve</th>
         <th></th>
     </tr>
 
@@ -67,8 +65,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.milestoneBonus)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.solution)
+        <td>            
+            @Html.ActionLink("Solve", "SolveTask", new { id=item.ID })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

@@ -15,7 +15,7 @@ namespace CIS526_FinalAssignment.Models
         public int ID { get; set; }
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public byte[] Image { get; set; }
+        public string image { get; set; }
         public string taskName { get; set; }
         public string description { get; set; }
         public int pointTotal { get; set; }

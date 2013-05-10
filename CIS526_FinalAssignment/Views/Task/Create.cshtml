@@ -84,6 +84,14 @@
             @Html.ValidationMessageFor(model => model.solution)
         </div>
 
+        <div class="editor-label">
+            @Html.Raw("Icon File Name")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.image)
+            @Html.ValidationMessageFor(model => model.image)
+        </div>
+
         <p>
             <input type="submit" value="Create" />
         </p>

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using CIS526_FinalAssignment.Models;
 using CIS526_FinalAssignment.ViewModels;
 using DotNetCasClient;
+using WebMatrix.WebData;
 
 namespace CIS526_FinalAssignment.Controllers
 {
@@ -33,6 +34,10 @@ namespace CIS526_FinalAssignment.Controllers
 
         public ActionResult Index()
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
             return View(db.Leaderboards.ToList());
         }
 
@@ -41,6 +46,11 @@ namespace CIS526_FinalAssignment.Controllers
 
         public ActionResult Details(int id = 0)
         {
+            if (!WebSecurity.Initialized)
+            {
+                WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+            }
+
             Leaderboard leaderboard = db.Leaderboards.Find(id);
             Rank(leaderboard);
             if (leaderboard == null)
@@ -52,7 +62,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Create
-
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             return View();
@@ -62,6 +72,7 @@ namespace CIS526_FinalAssignment.Controllers
         // POST: /Leaderboard/Create
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Create(Leaderboard leaderboard)
         {
             if (ModelState.IsValid)
@@ -76,7 +87,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Edit/5
-
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int id = 0)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
@@ -91,6 +102,7 @@ namespace CIS526_FinalAssignment.Controllers
         // POST: /Leaderboard/Edit/5
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(Leaderboard leaderboard)
         {
             if (ModelState.IsValid)
@@ -104,7 +116,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Leaderboard/Delete/5
-
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int id = 0)
         {
             Leaderboard leaderboard = db.Leaderboards.Find(id);
@@ -117,7 +129,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // POST: /Leaderboard/Delete/5
-
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -148,6 +160,18 @@ namespace CIS526_FinalAssignment.Controllers
                 score.score = cur.score;
                 score.rank = cur.rank;
                 Player player = db.Players.Find(cur.playerID);
+                List<TaskView> tasks = new List<TaskView>();
+                foreach (PlayerTask pt in player.tasksCompleted)
+                {
+                    TaskView tv = new TaskView();
+                    tv.image = pt.task.image;
+                    tv.task = pt.task.taskName;
+                    tv.taskId = pt.task.ID;
+
+                    tasks.Add(tv);
+                }
+                score.tasks = tasks.ToArray();
+
                 score.userName = player.username;
                 score.leaderboard = leaderboard.pathName;
                 results.Add(score);
@@ -175,6 +199,17 @@ namespace CIS526_FinalAssignment.Controllers
                 score.score = cur.score;
                 score.rank = cur.rank;
                 Player player = db.Players.Find(cur.playerID);
+                List<TaskView> tasks = new List<TaskView>();
+                foreach (PlayerTask pt in player.tasksCompleted)
+                {
+                    TaskView tv = new TaskView();
+                    tv.image = pt.task.image;
+                    tv.task = pt.task.taskName;
+                    tv.taskId = pt.task.ID;
+
+                    tasks.Add(tv);
+                }
+                score.tasks = tasks.ToArray();
                 score.userName = player.username;
                 score.leaderboard = leaderboard.pathName;
                 results.Add(score);
@@ -198,6 +233,21 @@ namespace CIS526_FinalAssignment.Controllers
                 results.Add(res);
             }
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpGet, ActionName("GetIcons")]
+        public JsonResult GetIcons(int id)
+        {
+            Player player = db.Players.Find(id);
+            List<string> icons = new List<string>();
+
+            foreach (PlayerTask t in player.tasksCompleted)
+            {
+                string s = t.task.image;
+                icons.Add(s);
+            }
+
+            return Json(icons.ToArray(), JsonRequestBehavior.AllowGet);
         }
 
         public void Rank(Leaderboard board)

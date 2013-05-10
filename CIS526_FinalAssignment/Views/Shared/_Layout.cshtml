@@ -13,7 +13,7 @@
     <div id="wrapper">
         <div id="header">
             <div id="nav" style="float: right">
-                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Players", "Index", "Player") | @Html.ActionLink("Tasks", "Index", "Task") |  @Html.ActionLink("My Profile", "Details", "Player", new { id = -1 }, null) | @Html.ActionLink("Complete a Task", "Complete", "Task") 
+                @Html.ActionLink("Leaderboards", "Index", "Leaderboard") | @Html.ActionLink("Tasks", "Index", "Task") |  @Html.ActionLink("My Profile", "Details", "Player", new { id = -1 }, null) | @Html.ActionLink("Admin View", "Index", "Player")
             </div><br />
             <div id="authenticate" style="float: right">
                  @Html.Partial("LoginPartial")

@@ -37,7 +37,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Task2/Create
-
+        [Authorize(Roles = "admin")]
         public ActionResult Create()
         {
             ViewBag.pathID = new SelectList(db.Leaderboards, "ID", "pathName");
@@ -46,7 +46,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // POST: /Task2/Create
-
+        [Authorize(Roles = "admin")]
         [HttpPost]
         public ActionResult Create(Task task)
         {
@@ -63,7 +63,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // GET: /Task2/Edit/5
-
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(int id = 0)
         {
             Task task = db.Tasks.Find(id);
@@ -79,6 +79,7 @@ namespace CIS526_FinalAssignment.Controllers
         // POST: /Task2/Edit/5
 
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public ActionResult Edit(Task task)
         {
             if (ModelState.IsValid)
@@ -142,7 +143,7 @@ namespace CIS526_FinalAssignment.Controllers
         }
         //
         // GET: /Task2/Delete/5
-        
+        [Authorize(Roles = "admin")]
         public ActionResult Delete(int id = 0)
         {
             Task task = db.Tasks.Find(id);
@@ -155,7 +156,7 @@ namespace CIS526_FinalAssignment.Controllers
 
         //
         // POST: /Task2/Delete/5
-
+        [Authorize(Roles = "admin")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {

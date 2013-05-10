@@ -14,5 +14,6 @@ namespace CIS526_FinalAssignment.ViewModels
         public int rank { get; set; }
         public string userName { get; set; }
         public string leaderboard { get; set; }
+        public TaskView[] tasks { get; set; }
     }
 }
