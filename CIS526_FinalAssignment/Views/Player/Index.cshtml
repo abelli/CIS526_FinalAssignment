@@ -24,6 +24,10 @@
         <th>
             @Html.Raw("Frozen?")
         </th>
+        <th>
+            @Html.Raw("Approve")
+
+        </th>
         <th></th>
     </tr>
 
@@ -40,6 +44,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.isFrozen)
+        </td>
+        <td>
+            @Html.ActionLink("Approve", "approve", new { id=item.ID })
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

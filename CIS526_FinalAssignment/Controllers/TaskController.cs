@@ -139,7 +139,13 @@ namespace CIS526_FinalAssignment.Controllers
                     if (FinishedTask.isMilestone == true && FinishedTask.playersCompleted.Count < 10)
                         pt.pointsEarned += FinishedTask.milestoneBonus;
 
-                    if (!p.tasksCompleted.Contains(pt))
+                    try
+                    {
+                        p.tasksCompleted.First(t => t.taskID == ID);
+                        return RedirectToAction("Index");
+                    }
+
+                    catch(Exception ex)
                     {
                         PathScore ps;
                         p.totalScore += pt.pointsEarned;
@@ -169,7 +175,7 @@ namespace CIS526_FinalAssignment.Controllers
                 }
                 catch (InvalidOperationException e)
                 {
-                    return View("WrongAnswer", FinishedTask);
+                    return RedirectToAction("Index");
                 }
                 return View("CorrectAnswer", FinishedTask);
             }

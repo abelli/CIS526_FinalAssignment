@@ -165,9 +165,7 @@ namespace CIS526_FinalAssignment.Controllers
         public ActionResult Edit(Player player)
         {
 
-                player.hasChanged = true;
-
-
+            player.hasChanged = true;
             if (ModelState.IsValid)
             {
                 db.Entry(player).State = EntityState.Modified;
@@ -197,6 +195,10 @@ namespace CIS526_FinalAssignment.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Player player = db.Players.Find(id);
+            var pathScores = player.gamesScores.Where(gs => gs.playerID == id);
+            var playerTasks = player.tasksCompleted.Where(tc => tc.playerID == id);
+            foreach (PlayerTask pt in playerTasks) db.PlayerTasks.Remove(pt);
+            foreach (PathScore ps in pathScores) db.PathScores.Remove(ps);
             db.Players.Remove(player);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -224,6 +226,19 @@ namespace CIS526_FinalAssignment.Controllers
             results = results.OrderBy(s => s.completionTime).ToList();
 
             return Json(results.ToArray(), JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult approve(int id)
+        {
+            Player p = db.Players.Find(id);
+            p.totalScore += p.frozenPoints;
+            p.frozenPoints = 0;
+            p.isFrozen = false;
+            db.Entry(p).State = EntityState.Modified;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+
         }
 
 
