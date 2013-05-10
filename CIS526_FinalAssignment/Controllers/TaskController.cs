@@ -117,25 +117,61 @@ namespace CIS526_FinalAssignment.Controllers
             Task FinishedTask = db.Tasks.Find(ID);
             if (FinishedTask.solution == solution)
             {
-                Player p = db.Players.First(pl => pl.username == User.Identity.Name);
-                //Check if player is frozen
-                if (p.isFrozen==true)
-                    p.frozenPoints += FinishedTask.pointTotal;
-                else
-                    p.totalScore += FinishedTask.pointTotal;
-                   
-                //Update Task & Total Score. 
-                db.Entry(p).State = EntityState.Modified;
-                db.SaveChanges();
-                db.Entry(FinishedTask).State = EntityState.Modified;
-                db.SaveChanges();
+                try
+                {
+                    Player p = db.Players.First(pl => pl.username == User.Identity.Name);
+                    PlayerTask pt = new PlayerTask();
+                    pt.playerID = p.ID;
+                    pt.taskID = ID;
+                    pt.completionTime = DateTime.Now;
+                    //Check if player is frozen
+                    if (p.isFrozen == true)
+                    {
+                        p.frozenPoints += FinishedTask.pointTotal;
+                        pt.pointsEarned = 0;
+                    }
+                    else
+                    {
+                        pt.pointsEarned = FinishedTask.pointTotal;
+                    }
 
-                //Check if milestone. //milestone bonus plus the 1st 10 students points
-               // if (FinishedTask.isMilestone == true ||)
-               //     FinishedTask.milestoneBonus += FinishedTask.pointTotal;
-              //  else
-              //      FinishedTask.milestoneBonus += FinishedTask.pointTotal;
+                    //Check if milestone. //milestone bonus plus the 1st 10 students points
+                    if (FinishedTask.isMilestone == true && FinishedTask.playersCompleted.Count < 10)
+                        pt.pointsEarned += FinishedTask.milestoneBonus;
 
+                    if (!p.tasksCompleted.Contains(pt))
+                    {
+                        PathScore ps;
+                        p.totalScore += pt.pointsEarned;
+                        try
+                        {
+                            ps = p.gamesScores.First(pas => pas.leaderboardID == FinishedTask.pathID);
+                            ps.score += pt.pointsEarned;
+                        }
+
+                        catch (Exception e)
+                        {
+                            ps = new PathScore();
+                            ps.leaderboardID = FinishedTask.pathID;
+                            ps.playerID = p.ID;
+                            ps.rank = 1; //?????
+                            ps.score = pt.pointsEarned;
+                            db.PathScores.Add(ps);
+                            db.SaveChanges();
+                        }
+                    }
+
+                    //Update Task & Total Score. 
+                    db.PlayerTasks.Add(pt);
+                    db.Entry(p).State = EntityState.Modified;
+                    db.SaveChanges();
+                    db.Entry(FinishedTask).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    return View("WrongAnswer", FinishedTask);
+                }
                 return View("CorrectAnswer", FinishedTask);
             }
             else

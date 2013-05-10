@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201305100416077_icon string.Designer.cs">
       <DependentUpon>201305100416077_icon string.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201305100555213_mig.cs" />
+    <Compile Include="Migrations\201305100555213_mig.Designer.cs">
+      <DependentUpon>201305100555213_mig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Leaderboard.cs" />
@@ -326,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201305100416077_icon string.resx">
       <DependentUpon>201305100416077_icon string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201305100555213_mig.resx">
+      <DependentUpon>201305100555213_mig.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

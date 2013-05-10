@@ -77,14 +77,6 @@ namespace CIS526_FinalAssignment.Controllers
         [Authorize(Roles = "admin")]
         public ActionResult Index()
         {
-            PlayerTask pt = new PlayerTask();
-            pt.ID = 1;
-            pt.playerID = 1;
-            pt.taskID = 2;
-            pt.pointsEarned = 50;
-            pt.completionTime = DateTime.Now;
-            db.PlayerTasks.Add(pt);
-            db.SaveChanges();
             return View(db.Players.ToList());
         }
 
